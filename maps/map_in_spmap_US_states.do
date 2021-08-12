@@ -175,7 +175,7 @@ spmap wellbeing_rank using  us_states_coord_mercator.dta , id(id)  `state_labeli
 	graphout map_US_wellbeing_labels_default 
 
 /* draw the wellbeing map with labels, beautifying parameters */
-spmap wellbeing_rank using  us_us_states_coord_mercatorator.dta , id(id) fcolor(BuYlRd)  ocolor(white ..)  clnumber(5)  legcount `state_labeling'  title("Ranked US States by Well-being (labeled)", size(*0.8)) 
+spmap wellbeing_rank using  us_states_coord_mercator.dta , id(id) fcolor(BuYlRd)  ocolor(white ..)  clnumber(5)  legcount `state_labeling'  title("Ranked US States by Well-being (labeled)", size(*0.8)) 
 
 	graphout map_US_wellbeing_labels_ed
 
