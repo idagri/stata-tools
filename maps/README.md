@@ -128,30 +128,34 @@ For simple cases, such as US states or world countries, a simple Google search f
 
 _The following step-by-step guide was originally partially based on  [STATA's official intro guide](https://www.stata.com/support/faqs/graphics/spmap-and-maps/) to mapping with spmap_
 
-Sample do-file script: `map_in_spmap.do`. It creates the maps shown below, and the following section highlights just some of the many options of spmap. 
+Sample do-file script: `map_in_spmap_US_states.do`. It creates the maps shown below, highlighting just a couple of the many options of spmap. 
 
-The file consists of two main parts: 
+The file consists of the following main sections: 
+
+0. Cleaning socio-economic data relevant to the map of interest
+    * There are no comments here on this as it's beyond the scope of the mapping tutorial
 
 1. Import the shapefile into STATA (with `shp2dta`), which creates two datasets (specified in suboptions):
-* one with the table list of regions with their unique id values (`database()`)
-* the other with the geographic information (`coordinates()`)
-* `genid()` - specifies a unique id which links the region unit id (e.g. state number) to their spatial info (coordinates of each vertix of the polygon) (make sure it's different from the actual state id)
+    * one with the table list of regions with their unique id values (`database()`)
+    * the other with the geographic information (`coordinates()`)
+    * `genid()` - specifies a unique id which links the region unit id (e.g. state number) to their spatial info (coordinates of each vertix of the polygon) (make sure it's different from the actual state id)
+    * An additional section to label each state on the map (based on a STATA forum discussion) - no need to get into the details, presented for convenience  
 
 2. Merge the spatial dataset with the dataset with your variable of interest
-* make sure you rename the spatial-unit unique polygon identifier (e.g. state id)) with the same name you will have in your dataset with the variable of interest (e.g. income)
-* some options for the maps are taken out into the locals with three sample maps (blank, a map in shades of a single color with a detailed legend, a map in colors from green to red with a less detailed legend)
-* the output is highlighting some of the different options for spmap 
+    * make sure you rename the spatial-unit unique polygon identifier (e.g. state id)) with the same name you will have in your dataset with the variable of interest (e.g. income)
+    * some options for the maps are taken out into the locals with three sample maps (blank, a map in shades of a single color with a detailed legend, a colorful map with adjusted line color and font sized)
+    * the output is highlighting some of the different options for spmap 
 
 
 
 **Note:**
 
 * there are also options to produce a map with points of different sizes and bars, check the spmap help for more info
-* a scalebar can be an added tool
+* a scalebar can be added
 * as of now, spmap doesn't provide an option of having a baselayer map behind your data polygons (e.g. a topographic or any other type of map, that function is supported in ArcGIS, QGIS, etc.)
 * If you want to explore additional spmap options with vivid examples, consult the [following page](https://zhuanlan.zhihu.com/p/86492495). The page is Mandarin, but a Google Chrome add-on will easily translate that for you. The code for each map **preceeds** the sample map in the page. 
 
-
+* Check out some of the options for color themes [here](http://repec.sowi.unibe.ch/stata/palettes/colors.html) 
 
 _______________________________________________________________________________________________________
 
@@ -219,5 +223,23 @@ spmap wellbeing_rank using  state_coordinates_mercator.dta , id(id) fcolor(BuYlR
 	graphout map_US_wellbeing_ed
 
 ```
+
+_______________________________________________________________________________________________________
+
+
+## Take-Home Task
+
+* Create a chloropleth map of a region of interest to you showing a variable we haven't looked at (can be country or subnational level)
+    * Use a different shapefile (not US states)
+    * You can choose any variable to show on the map 
+ 
+* Change some settings 
+    * select a different color scheme for output
+    * explore 2 additional options from the [STATA help guilde](http://repec.org/bocode/s/spmap) and show them on the map
+   
+* Write 2 sentences: 
+    1) explain what the map shows
+    2) explain why you chose the visual representation you chose (why is this a good color theme and text size) and identify one point that could be improved
+
 
 
