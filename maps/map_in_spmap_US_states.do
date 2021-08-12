@@ -129,7 +129,7 @@ local f = r(f)
 local a = r(a)
 // di "`f'"
 // di "`a'"
-save states_coord_merc.dta, replace
+save us_states_coord_mercator.dta, replace
 
 
 use us_states_db.dta, clear
@@ -164,22 +164,20 @@ local state_labeling " label(data(maplabels) xcoord(x_c)  ycoord(y_c)    label(N
 use us_states_db_clean.dta,  replace 
 
 /* draw a blank map with labels */
-spmap                using  states_coord_merc.dta,   id(id)  `state_labeling'  title("Blank Map of US States (labeled)", size(*0.8)) 
+spmap                using  us_states_coord_mercator.dta,   id(id)  `state_labeling'  title("Blank Map of US States (labeled)", size(*0.8)) 
  
 	graphout map_US_blank_labeled
 
 
 /* draw the wellbeing map with labels with defaults */
-spmap wellbeing_rank using  states_coord_merc.dta , id(id)  `state_labeling' 
+spmap wellbeing_rank using  us_states_coord_mercator.dta , id(id)  `state_labeling' 
 	
 	graphout map_US_wellbeing_labels_default 
 
 /* draw the wellbeing map with labels, beautifying parameters */
-spmap wellbeing_rank using  us_states_coord_mercator.dta , id(id) fcolor(BuYlRd)  ocolor(white ..)  clnumber(5)  legcount `state_labeling'  title("Ranked US States by Well-being (labeled)", size(*0.8)) 
+spmap wellbeing_rank using  us_us_states_coord_mercatorator.dta , id(id) fcolor(BuYlRd)  ocolor(white ..)  clnumber(5)  legcount `state_labeling'  title("Ranked US States by Well-being (labeled)", size(*0.8)) 
 
 	graphout map_US_wellbeing_labels_ed
-
-
 
 
 
