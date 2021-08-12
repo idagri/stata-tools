@@ -87,18 +87,18 @@ use us_states_db_clean.dta,  replace
 
 spmap using us_states_coord.dta, id(id)  title("Blank Map of US States")
 		
-	graphout map_US_blank 
+	graphout output/map_US_blank 
 
 
 /* draw the wellbeing map without labels with defaults */
 spmap wellbeing_rank using  us_states_coord.dta , id(id)  
 	
-	graphout map_US_wellbeing_default 
+	graphout output/map_US_wellbeing_default 
 
 /* draw the wellbeing map without labels, beautifying parameters */
 spmap wellbeing_rank using  us_states_coord.dta , id(id) fcolor(BuYlRd)  ocolor(white ..)  clnumber(5)  legcount  title("Ranked US States by Well-being", size(*0.8)) 
 
-	graphout map_US_wellbeing_ed
+	graphout output/map_US_wellbeing_ed
 
 
 
@@ -166,18 +166,18 @@ use us_states_db_clean.dta,  replace
 /* draw a blank map with labels */
 spmap                using  us_states_coord_mercator.dta,   id(id)  `state_labeling'  title("Blank Map of US States (labeled)", size(*0.8)) 
  
-	graphout map_US_blank_labeled
+	graphout output/map_US_blank_labeled
 
 
 /* draw the wellbeing map with labels with defaults */
 spmap wellbeing_rank using  us_states_coord_mercator.dta , id(id)  `state_labeling' 
 	
-	graphout map_US_wellbeing_labels_default 
+	graphout output/map_US_wellbeing_labels_default 
 
 /* draw the wellbeing map with labels, beautifying parameters */
 spmap wellbeing_rank using  us_states_coord_mercator.dta , id(id) fcolor(BuYlRd)  ocolor(white ..)  clnumber(5)  legcount `state_labeling'  title("Ranked US States by Well-being (labeled)", size(*0.8)) 
 
-	graphout map_US_wellbeing_labels_ed
+	graphout output/map_US_wellbeing_labels_ed
 
 
 
