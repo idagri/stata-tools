@@ -30,10 +30,12 @@ By the end of the reading and working through this guide, you will be able to:
 * Name and distinguish the main types and subtypes of spatial data
 * Identify the mapping package and its key options in STATA
 * Create an original map from a new spatial data source (after practicing)
-_
+
+_[emoji source](https://www.pngegg.com/en/png-eeofh)_
 _______________________________________________________________________________________________________
 
 ## Spatial Data 
+
 
 _If you've worked with spatial data and  made maps before, consider skipping this section. 
 It offers a brief explanation of how any sort of table-format data interacts with spatial data (points, polygons) to make a map._
@@ -42,6 +44,9 @@ A common map you can make with spmap is a map of polygons colored based on the v
 or population density or some other numeric or categorical metric. It is called a _**[Cloropleth map](https://en.wikipedia.org/wiki/Choropleth_map)**_.
 
 In this case, each state is a polygon (i.e. a shape consisting of lines and coordinate points in space), and income would be the variable you map.
+
+
+<img src="https://user-images.githubusercontent.com/33915653/129184220-88f2c647-e4a9-4a82-8ca2-edf1556f029a.png" height="250"> [(source)](https://www.researchgate.net/figure/GIS-has-capability-to-integrate-different-types-of-spatial-data-areas-ie-parts-of-the_fig8_221929448)
 
 
 ### What is Spatial Data? 
@@ -56,6 +61,8 @@ Basic explanation with an analogy:
 
 
 In order for the command to know what the shape of each region looks like on the map, we need a separate geo-data file that contains this information. Such data is commonly stored in shapefiles that can be imported into STATA to make sure that spmap know how to map the polygons relative to each other. 
+
+
 
 ### Types of Spatial Data
 
