@@ -4,4 +4,4 @@ Select tools I found useful in STATA with self-help guides on how to use them an
 
 ## Guides & Tutorials
 
-* [Maps with SPMAP / GRMAP](maps_with_spmap.md)
+* [Maps with SPMAP / GRMAP](maps/README.md)
