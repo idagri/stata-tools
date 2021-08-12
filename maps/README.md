@@ -19,6 +19,18 @@ _Before trying to use `spmap` or the `shp2dta` commands, make sure you've instal
 * `ssc install spmap` 
 * `ssc install shp2dta`
 
+
+_______________________________________________________________________________________________________
+
+## Learning Objectives (LOs) <img src="https://user-images.githubusercontent.com/33915653/129183783-856bf107-9dff-42fc-aa95-ea93ef604ecd.png" height="50">
+
+
+By the end of the reading and working through this guide, you will be able to:
+
+* Name and distinguish the main types and subtypes of spatial data
+* Identify the mapping package and its key options in STATA
+* Create an original map from a new spatial data source (after practicing)
+_
 _______________________________________________________________________________________________________
 
 ## Spatial Data 
