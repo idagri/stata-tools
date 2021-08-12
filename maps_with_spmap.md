@@ -77,15 +77,13 @@ In order for the command to know what the shape of each region looks like on the
 
 * **What are the types of data you see in this map?**
 
-<img src="https://user-images.githubusercontent.com/33915653/129160452-aba74575-2a00-4b4e-9018-60798d31bd54.png" height="600">
+<img src="https://www.translink.ca/-/media/translink/documents/transit-fares/where-to-buy/london_drugs_compass_vending_machine_locations.pdf" height="600">
 
 
 ([Source](https://en.wikipedia.org/wiki/Transportation_in_Vancouver))
 
 
 * **What are the types of data you see in this map?**
-
-![image](https://user-images.githubusercontent.com/33915653/129158702-79bf2b28-b8e4-4d91-b1db-ab8ad63bd23e.png)
 
 <img src="https://user-images.githubusercontent.com/33915653/129158702-79bf2b28-b8e4-4d91-b1db-ab8ad63bd23e.png" height="600">
 
