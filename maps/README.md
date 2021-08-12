@@ -101,9 +101,9 @@ In order for the command to know what the shape of each region looks like on the
 <summary>    Reflect on your experience with maps:  </summary>
 <br>
 
-	What are types of spatial data you have encountered recently? 
-	
-	Think of a map you came across in your daily life and the objects it had.
+_What are types of spatial data you have encountered recently?_
+
+_Think of a map you came across in your daily life and the objects it had._
 	
 	
 </details>
