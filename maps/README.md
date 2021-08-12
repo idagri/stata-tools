@@ -229,7 +229,7 @@ ________________________________________________________________________________
 
 ## Take-Home Task
 
-* Create a chloropleth map of a region of interest to you showing a variable we haven't looked at (can be country or subnational level)
+* Create a new map of a region of interest to you showing a variable we haven't looked at 
     * Use a different shapefile (not US states)
     * You can choose any variable to show on the map 
  
@@ -237,9 +237,9 @@ ________________________________________________________________________________
     * select a different color scheme for output
     * explore 2 additional options from the [STATA help guilde](http://repec.org/bocode/s/spmap) and show them on the map
    
-* Write 2 sentences: 
-    1) explain what the map shows
-    2) explain why you chose the visual representation you chose (why is this a good color theme and text size) and identify one point that could be improved
+* Write 2 sentences (do stick to 2 non-run-on sentences practicing summarizing the main message): 
+    1) 1 sentence explaining what the map shows - what is the main message / why you think this map is interesting
+    2) 1 sentence explaining why you chose the visual representation you chose (why is this a good color theme and text size) and identify one point that could be improved
 
 
 
