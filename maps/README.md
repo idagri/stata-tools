@@ -164,6 +164,11 @@ ________________________________________________________________________________
 
 **Blank map:** 
 
+```
+/* test blank map by state (the id needs to match the id listed in shp2dta command */
+spmap using us_states_coord.dta, id(id)  osize(vvthin ..) title("Blank Map of US States", size(*0.8))		
+
+```
 
 ![image](https://user-images.githubusercontent.com/33915653/129176675-0769cfac-a38e-45cb-a3b9-02394587a6b6.png)
 
@@ -172,13 +177,41 @@ ________________________________________________________________________________
 **Map samples with different styles:**
 
 
+
+
 #### Default:
+
+Working code for the map specifically:
+
+```
+
+local state_labeling " label(data(maplabels) xcoord(x_c)  ycoord(y_c)    label(NAME)  size(*0.75 ..) pos(12 0) ) "
+
+/* draw the wellbeing map with labels with defaults */
+spmap wellbeing_rank using  state_coordinates_mercator.dta , id(id)  `state_labeling' 
+	
+```
 
 ![image](https://user-images.githubusercontent.com/33915653/129179622-647336cb-c191-400b-ad09-bd9f096486e2.png)
 
+
+#### Small channges:
+
 ![image](https://user-images.githubusercontent.com/33915653/129178707-661b26a6-df11-4227-85e2-50db2edcbf8f.png)
 
-#### Beautified:
+#### Beautifying parameters:
+
+
+```
+
+local state_labeling " label(data(maplabels) xcoord(x_c)  ycoord(y_c)    label(NAME)  size(*0.75 ..) pos(12 0) ) "
+
+/* draw the wellbeing map with labels, beautifying parameters */
+spmap wellbeing_rank using  state_coordinates_mercator.dta , id(id) fcolor(BuYlRd)  ocolor(white ..)  clnumber(5)  legcount `state_labeling' 
+	
+```
+
+
 
 ![image](https://user-images.githubusercontent.com/33915653/129179470-3f4d92f1-6140-4026-8603-737304140390.png)
 
