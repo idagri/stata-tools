@@ -107,6 +107,7 @@ In order for the command to know what the shape of each region looks like on the
 
 ### Question - Test Yourself:
 
+_Have a look at the drop-down question, answer is hidden below, try to answer before seeing the answer_ :smile:
 
 <details>
 <summary>   What are the types of data you see in these maps? </summary>
@@ -114,8 +115,9 @@ In order for the command to know what the shape of each region looks like on the
 
 | Map 1             |  Map 2 |
 :-------------------------:|:-------------------------:
-<img src="https://user-images.githubusercontent.com/33915653/129160452-aba74575-2a00-4b4e-9018-60798d31bd54.png">    |   <img src="https://user-images.githubusercontent.com/33915653/129158702-79bf2b28-b8e4-4d91-b1db-ab8ad63bd23e.png" >
-([Source](https://www.translink.ca/-/media/translink/documents/transit-fares/where-to-buy/london_drugs_compass_vending_machine_locations.pdf)) | (Screenshot from [Google Earth](https://earth.google.com/web/@49.34894001,-123.047145,176.51533574a,523016.13350607d,35y,0h,0t,0r/data=CiQSIhIgMGY3ZTJkYzdlOGExMTFlNjk5MGQ2ZjgxOGQ2OWE2ZTc))
+**Vancouver Transit Map & Compass Card Purchase locations** | **Night lights around Delhi, India, <br> with subdistrict borders and cities over 1 million people**  
+<img src="https://user-images.githubusercontent.com/33915653/129160452-aba74575-2a00-4b4e-9018-60798d31bd54.png"> | ![image](https://user-images.githubusercontent.com/33915653/129258323-f873e838-aacb-4d68-90ed-a9bd5036a8d6.png)
+([Source](https://www.translink.ca/-/media/translink/documents/transit-fares/where-to-buy/london_drugs_compass_vending_machine_locations.pdf)) | Original map based on the [Google Earth](https://earth.google.com/web/@49.34894001,-123.047145,176.51533574a,523016.13350607d,35y,0h,0t,0r/data=CiQSIhIgMGY3ZTJkYzdlOGExMTFlNjk5MGQ2ZjgxOGQ2OWE2ZTc) night lights data, Indian subdistricts map and Geonames city coordinates  )
 
 	
 	
@@ -128,8 +130,9 @@ In order for the command to know what the shape of each region looks like on the
 
 | Map 1             |  Map 2 |
 :-------------------------:|:-------------------------:
-| A vector map with lines and points            |  A vector map of cities/towns with an overlaid raster of night lights |
-| The map doesn't really include any polygons, they could be neighborhood areas, for instance   |  The map doesn't include any polygons, they would be provincial boundaries, for instance  |
+| A vector map with lines and points            |  A vector map of cities and subdistricts overlaid over the raster of night lights |
+| The map doesn't really include any polygons, they could be neighborhood areas, for instance   |  The map includes city point locations with point size varying by population, subdistrict polygons, and night lights raster data in the background 
+| | This map could be used to calculate the average night lights density in each subdistrict, for instance (outside of STATA, raster calculations are not supported in spmap) |
 
 	
 	
