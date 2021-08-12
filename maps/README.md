@@ -91,7 +91,50 @@ In order for the command to know what the shape of each region looks like on the
     - Not easily imported into STATA, and hence beyond the scope of this tutorial
 
 
-#### Question:
+<details>
+<summary>    Reflect on your experience with maps:  </summary>
+<br>
+
+	What are types of spatial data you have encountered recently? 
+	
+	Think of a map you came across in your daily life and the objects it had.
+	
+	
+</details>
+
+
+
+#### Question - Test Yourself:
+
+
+<details>
+<summary>   What are the types of data you see in these maps? </summary>
+<br>
+
+| Map 1             |  Map 2 |
+:-------------------------:|:-------------------------:
+<img src="https://user-images.githubusercontent.com/33915653/129160452-aba74575-2a00-4b4e-9018-60798d31bd54.png">    |   <img src="https://user-images.githubusercontent.com/33915653/129158702-79bf2b28-b8e4-4d91-b1db-ab8ad63bd23e.png" >
+([Source](https://www.translink.ca/-/media/translink/documents/transit-fares/where-to-buy/london_drugs_compass_vending_machine_locations.pdf))
+  | (Screenshot from [Google Earth](https://earth.google.com/web/@49.34894001,-123.047145,176.51533574a,523016.13350607d,35y,0h,0t,0r/data=CiQSIhIgMGY3ZTJkYzdlOGExMTFlNjk5MGQ2ZjgxOGQ2OWE2ZTc))
+
+	
+	
+</details>
+
+
+<details>
+<summary>   Check yourself </summary>
+<br>
+
+| Map 1             |  Map 2 |
+:-------------------------:|:-------------------------:
+| * A vector map with lines and points            |  * A vector map of Cities with an overlaid raster of night lights |
+| * The map doesn't really include any polygons   |  *  |
+
+	
+	
+</details>
+
 
 
 * **What are the types of data you see in this map?**
@@ -138,9 +181,15 @@ For simple cases, such as US states or world countries, a simple Google search f
 [US States shapefiles](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html), selecting the largest file for higher resolution of the map:
 
 * [cb_2018_us_state_500k.zip](https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_state_500k.zip) (3.2 MB)
+
+After unzipping, the folder will look like this:
+
+![image](https://user-images.githubusercontent.com/33915653/129244070-ddfd092d-8e9c-4f19-85d9-ff7bab9f11b2.png)
+
+
+* Shapefile features:
     * Shapefiles often come as zip folders, unzip them in your desired directory preferably in a subfolder with a desired name and you'll get several files with different extensions that are a part of the spatial shapefile ingrastructure
     * the files we are interested in are `.shp` extension (contains the geometries, i.e. coordinates of objects / areas of interest) and `.dbf` (contains the table-form data with names for every object in the .shp file with geometries
-
 
 
 ### Do-file Structure
