@@ -1,5 +1,6 @@
 # stata-tools
-This repo contains a select set of tools I found useful in STATA with self-help guides on how to use them
+
+A select set of tools I found useful in STATA with self-help guides on how to use them and sample do files
 
 ## Guides & Tutorials
 
