@@ -84,6 +84,12 @@ In order for the command to know what the shape of each region looks like on the
     - This data is very frequently displayed is basic maps and is the subject of **this tutorial** 
 
 
+| Polygons on a Coordinate System             |  Polygons on a Base City Map |
+:-------------------------:|:-------------------------:
+![image](/maps/visuals/graph_polygons_on_coord_system.jpg)      | ![image](/maps/visuals/graph_polygons_on_basemap.png) |
+[Source](https://achievethecore.org/coherence-map/6/26/266/266) | [Source](https://medium.com/modus-create-front-end-development/placing-markers-inside-google-maps-polygons-855552210e4b) | 
+
+
 #### 2. Raster Data
 
 * An image where each uniformly-sized pixel has a certain value (typically based on color) 
