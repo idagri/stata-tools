@@ -128,7 +128,7 @@ In order for the command to know what the shape of each region looks like on the
 
 | Map 1             |  Map 2 |
 :-------------------------:|:-------------------------:
-| A vector map with lines and points            |  A vector map of Cities with an overlaid raster of night lights |
+| A vector map with lines and points            |  A vector map of cities/towns with an overlaid raster of night lights |
 | The map doesn't really include any polygons, they could be neighborhood areas, for instance   |  The map doesn't include any polygons, they would be provincial boundaries, for instance  |
 
 	
@@ -175,7 +175,9 @@ After unzipping, the folder will look like this:
 
 * Shapefile features:
     * Shapefiles often come as zip folders, unzip them in your desired directory preferably in a subfolder with a desired name and you'll get several files with different extensions that are a part of the spatial shapefile ingrastructure
-    * the files we are interested in are `.shp` extension (contains the geometries, i.e. coordinates of objects / areas of interest) and `.dbf` (contains the table-form data with names for every object in the .shp file with geometries
+    * the files we are interested in are:
+        *  `.shp` extension (contains the geometries, i.e. coordinates of objects / areas of interest) 
+        *  `.dbf` (contains the table-form data with names for every object in the .shp file with geometries
 
 
 ### Do-file Structure
