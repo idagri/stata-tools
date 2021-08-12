@@ -106,7 +106,25 @@ Other short helpful videos to watch:
 _______________________________________________________________________________________________________
 
 
-## Do-file Structure
+## Working Example with US States
+
+### Looking for Spatial Data (Shapefiles)
+
+The assumption is that you have the table-form data with a variable of interest you want to map, this tutorial is based on the US states wellbeing rank taken based on the Gallup 2018 survey with the results shared [here](https://news.gallup.com/poll/247034/hawaii-tops-wellbeing-record-7th-time.aspx). Basic cleaning of renaming variables etc. is outside of the scope of this tutorial.
+
+As for spatial data, when you want to make a map of something for the first time, you will need to find a file that (in jibberish to a beginner) stores the spatial information about the polygons you want to map - i.e. the location and size of the dishes on the dining table, before figuring out how to link dishes to plates.
+
+For simple cases, such as US states or world countries, a simple Google search for `US states shapefile` would yield many relevant results, and you need to use your judgement to select the most approapriate source. In this case, `census.gov` apprears to be as reliable as it can get for the US, so I am selecting it as the [main source](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html) for shapefiles we'll use for US states.
+
+[US States shapefiles](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html), selecting the largest file for higher resolution of the map:
+
+* [cb_2018_us_state_500k.zip](https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_state_500k.zip) (3.2 MB)
+    * Shapefiles often come as zip folders, unzip them in your desired directory preferably in a subfolder with a desired name and you'll get several files with different extensions that are a part of the spatial shapefile ingrastructure
+    * the files we are interested in are `.shp` extension (contains the geometries, i.e. coordinates of objects / areas of interest) and `.dbf` (contains the table-form data with names for every object in the .shp file with geometries
+
+
+
+### Do-file Structure
 
 _The following step-by-step guide was originally partially based on  [STATA's official intro guide](https://www.stata.com/support/faqs/graphics/spmap-and-maps/) to mapping with spmap_
 
@@ -142,12 +160,23 @@ ________________________________________________________________________________
 
 **Blank map:** 
 
-[[/files/map_blank_small.png]]
+
+![image](https://user-images.githubusercontent.com/33915653/129176675-0769cfac-a38e-45cb-a3b9-02394587a6b6.png)
+
 
 
 **Map samples with different styles:**
 
-[[/files/map_samples.png]]
+
+#### Default:
+
+![image](https://user-images.githubusercontent.com/33915653/129179622-647336cb-c191-400b-ad09-bd9f096486e2.png)
+
+![image](https://user-images.githubusercontent.com/33915653/129178707-661b26a6-df11-4227-85e2-50db2edcbf8f.png)
+
+#### Beautified:
+
+![image](https://user-images.githubusercontent.com/33915653/129179470-3f4d92f1-6140-4026-8603-737304140390.png)
 
 
 ## Select options
@@ -164,10 +193,30 @@ ________________________________________________________________________________
 | ocolor()        | polygon border (outline) color _(has to be specified separately for polygons with missing values using ndcolor, ndsize, etc.)_                                                               |
 
 
-Working code:
+Full do file with cleaning and merging before making the map can be found here as `map_in_spmap_US_states.do`.
+
+
+
+Working code for the map specifically:
 
 ```
-(see separate do files)
+/* Create maps  */
+
+/* draw a blank map with labels */
+spmap                using  state_coordinates_mercator.dta,   id(id)   ocolor(gray ..)  `state_labeling'  title("Blank Map of US States (labeled)", size(*0.8)) 
+ 
+	graphout map_US_blank_labeled
+
+
+/* draw the wellbeing map with labels with defaults */
+spmap wellbeing_rank using  state_coordinates_mercator.dta , id(id)  `state_labeling' 
+	
+	graphout map_US_wellbeing_0 
+
+/* draw the wellbeing map with labels, beautifying parameters */
+spmap wellbeing_rank using  state_coordinates_mercator.dta , id(id) fcolor(BuYlRd)  ocolor(white ..)  clnumber(5)  legcount `state_labeling' 
+
+	graphout map_US_wellbeing_ed
 
 ```
 
