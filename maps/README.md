@@ -103,8 +103,9 @@ In order for the command to know what the shape of each region looks like on the
 </details>
 
 
+--------------------------------------------------
 
-#### Question - Test Yourself:
+### Question - Test Yourself:
 
 
 <details>
@@ -114,8 +115,7 @@ In order for the command to know what the shape of each region looks like on the
 | Map 1             |  Map 2 |
 :-------------------------:|:-------------------------:
 <img src="https://user-images.githubusercontent.com/33915653/129160452-aba74575-2a00-4b4e-9018-60798d31bd54.png">    |   <img src="https://user-images.githubusercontent.com/33915653/129158702-79bf2b28-b8e4-4d91-b1db-ab8ad63bd23e.png" >
-([Source](https://www.translink.ca/-/media/translink/documents/transit-fares/where-to-buy/london_drugs_compass_vending_machine_locations.pdf))
-  | (Screenshot from [Google Earth](https://earth.google.com/web/@49.34894001,-123.047145,176.51533574a,523016.13350607d,35y,0h,0t,0r/data=CiQSIhIgMGY3ZTJkYzdlOGExMTFlNjk5MGQ2ZjgxOGQ2OWE2ZTc))
+([Source](https://www.translink.ca/-/media/translink/documents/transit-fares/where-to-buy/london_drugs_compass_vending_machine_locations.pdf)) | (Screenshot from [Google Earth](https://earth.google.com/web/@49.34894001,-123.047145,176.51533574a,523016.13350607d,35y,0h,0t,0r/data=CiQSIhIgMGY3ZTJkYzdlOGExMTFlNjk5MGQ2ZjgxOGQ2OWE2ZTc))
 
 	
 	
@@ -128,28 +128,14 @@ In order for the command to know what the shape of each region looks like on the
 
 | Map 1             |  Map 2 |
 :-------------------------:|:-------------------------:
-| * A vector map with lines and points            |  * A vector map of Cities with an overlaid raster of night lights |
-| * The map doesn't really include any polygons   |  *  |
+| A vector map with lines and points            |  A vector map of Cities with an overlaid raster of night lights |
+| The map doesn't really include any polygons, they could be neighborhood areas, for instance   |  The map doesn't include any polygons, they would be provincial boundaries, for instance  |
 
 	
 	
 </details>
 
-
-
-* **What are the types of data you see in this map?**
-
-<img src="https://user-images.githubusercontent.com/33915653/129160452-aba74575-2a00-4b4e-9018-60798d31bd54.png" height="600">
-
-
-([Source](https://www.translink.ca/-/media/translink/documents/transit-fares/where-to-buy/london_drugs_compass_vending_machine_locations.pdf))
-
-
-* **What are the types of data you see in this map?**
-
-<img src="https://user-images.githubusercontent.com/33915653/129158702-79bf2b28-b8e4-4d91-b1db-ab8ad63bd23e.png" height="600">
-
-(Screenshot from [Google Earth](https://earth.google.com/web/@49.34894001,-123.047145,176.51533574a,523016.13350607d,35y,0h,0t,0r/data=CiQSIhIgMGY3ZTJkYzdlOGExMTFlNjk5MGQ2ZjgxOGQ2OWE2ZTc))
+--------------------------------------------------
 
 
 
