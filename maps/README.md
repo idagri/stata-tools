@@ -54,12 +54,6 @@ In this case, each state is a polygon (i.e. a shape consisting of lines and coor
 
 In this tutorial, I will explain how to make a map coloring different areas (e.g. countries / provinces / counties) by the value of some variable related to them.
 
-Basic explanation with an analogy:
-
-> Think of making a map as arranging a dinner table. If your spatial units (e.g. states) are plates, and your variables of interest (e.g. income) are your dishes that you put on the plates. 
-> In the `shp2dta`, the `dataset` includes the "dishes" and the `coordinates` include the info about the plates.
-
-
 In order for the command to know what the shape of each region looks like on the map, we need a separate geo-data file that contains this information. Such data is commonly stored in shapefiles that can be imported into STATA to make sure that spmap know how to map the polygons relative to each other. 
 
 
@@ -194,6 +188,13 @@ After unzipping, the folder will look like this:
 _The following step-by-step guide was originally partially based on  [STATA's official intro guide](https://www.stata.com/support/faqs/graphics/spmap-and-maps/) to mapping with spmap_
 
 Sample do-file script: `map_in_spmap_US_states.do`. It creates the maps shown below, highlighting just a couple of the many options of spmap. 
+
+
+Basic explanation with an analogy:
+
+> Think of making a map as arranging a dinner table. If your spatial units (e.g. states) are plates, and your variables of interest (e.g. income) are your dishes that you put on the plates. 
+> In the `shp2dta`, the `dataset` includes the "dishes" and the `coordinates` include the info about the plates.
+
 
 The file consists of the following main sections: 
 
